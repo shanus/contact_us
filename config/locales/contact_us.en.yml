@@ -10,6 +10,8 @@ en:
     contacts:
       new:
         contact_us: "Contact Us"
+        name: "Name"
+        subject: "Subject"
         email: "Email"
         message: "Message"
         submit: "Submit"

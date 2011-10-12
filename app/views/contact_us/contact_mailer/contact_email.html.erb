@@ -1,3 +1,9 @@
+<% if @subject %>
+<p>Subject: <%= @subject %></p>
+<% end %>
+<% if @name %>
+<p>Name: <%= @name %></p>
+<% end %>
 <p><%= @message %></p>
 <p>---------------------</p>
 <p><%= t('.sent_by_contact_form') %></p>
