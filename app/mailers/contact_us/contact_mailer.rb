@@ -3,7 +3,7 @@ class ContactUs::ContactMailer < ActionMailer::Base
     @message = contact.message
     @subject = contact.subject
     @name = contact.name
-    @email => contact.email
+    @email = contact.email
 
     mail :from    => @email,
          :subject => (@subject) ? @subject : t('contact_us.contact_mailer.contact_email.subject', :email => @email),
@@ -12,7 +12,7 @@ class ContactUs::ContactMailer < ActionMailer::Base
   
   def thank_you_email(contact)
     @name = contact.name
-    @email => contact.email
+    @email = contact.email
     
     mail :from    => ContactUs.mailer_to,
          :subject => t('contact_us.contact_mailer.thank_you.subject'),
