@@ -3,9 +3,19 @@ class ContactUs::ContactMailer < ActionMailer::Base
     @message = contact.message
     @subject = contact.subject
     @name = contact.name
+    @email => contact.email
 
-    mail :from    => contact.email,
-         :subject => (@subject) ? @subject : t('contact_us.contact_mailer.contact_email.subject', :email => contact.email),
+    mail :from    => @email,
+         :subject => (@subject) ? @subject : t('contact_us.contact_mailer.contact_email.subject', :email => @email),
          :to      => ContactUs.mailer_to
+  end
+  
+  def thank_you_email(contact)
+    @name = contact.name
+    @email => contact.email
+    
+    mail :from    => ContactUs.mailer_to,
+         :subject => t('contact_us.contact_mailer.thank_you.subject'),
+         :to      => @email
   end
 end

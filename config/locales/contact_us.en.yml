@@ -7,6 +7,8 @@ en:
       contact_email:
         sent_by_contact_form: "Sent by contact form."
         subject: "Contact Us message from %{email}"
+      thank_you:
+        subject: "Thank you for your feedback"
     contacts:
       new:
         contact_us: "Contact Us"
@@ -16,5 +18,5 @@ en:
         message: "Message"
         submit: "Submit"
     notices:
-      error: "You must enter both fields."
+      error: "You must fill out all of the fields."
       success: "Contact email was successfully sent."
