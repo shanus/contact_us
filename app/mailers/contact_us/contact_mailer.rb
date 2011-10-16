@@ -4,6 +4,7 @@ class ContactUs::ContactMailer < ActionMailer::Base
     @subject = contact.subject
     @name = contact.name
     @email = contact.email
+    @headers['Reply-To'] = "'#{@name}' <#{@email}>"
 
     mail :from    => @email,
          :subject => (@subject) ? @subject : t('contact_us.contact_mailer.contact_email.subject', :email => @email),
