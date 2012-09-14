@@ -13,6 +13,7 @@ class ContactUs::Contact
   # validates :subject, :presence => true
 
   def initialize(attributes = {})
+    attributes = {} if attributes.nil?
     attributes.each do |key, value|
       self.send("#{key}=", value)
     end
